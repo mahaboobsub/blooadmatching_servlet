@@ -281,10 +281,10 @@
                             ageInput.value = data.profile.age || '';
                             genderInput.value = data.profile.gender || 'M';
                             lastDonationDateInput.value = data.profile.lastDonationDate || '';
-                            isAvailableCheckbox.checked = data.profile.available;
+                            isAvailableCheckbox.checked = data.profile.isAvailable;
 
                             // Status Card
-                            if (data.profile.available) {
+                            if (data.profile.isAvailable) {
                                 statusContent.innerHTML = `
                                     <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 mb-4 animate-pulse-slow">
                                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -316,7 +316,7 @@
                             document.getElementById('toggle-status-btn').addEventListener('click', () => {
                                 const params = new URLSearchParams();
                                 params.append('action', 'toggleAvailability');
-                                params.append('isAvailable', !data.profile.available);
+                                params.append('isAvailable', !data.profile.isAvailable);
 
                                 fetch('donor/profile', {
                                     method: 'POST',

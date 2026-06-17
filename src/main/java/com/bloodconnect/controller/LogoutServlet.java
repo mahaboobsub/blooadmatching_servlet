@@ -27,4 +27,11 @@ public class LogoutServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write("{\"success\":true}");
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+        doGet(request, response);
+    }
 }
+
