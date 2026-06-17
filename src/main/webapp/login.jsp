@@ -35,7 +35,7 @@
         .input-glow:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3); }
     </style>
 </head>
-<body class="font-sans bg-gray-950 text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+<body class="font-sans bg-gray-950 text-white min-h-screen flex items-center justify-center relative overflow-y-auto py-10">
 
     <!-- Background decorations -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
