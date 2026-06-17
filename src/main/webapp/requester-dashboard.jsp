@@ -225,7 +225,7 @@
 
     <!-- Footer -->
     <footer class="relative z-10 glass border-t border-white/5 py-8 mt-16 text-center text-gray-500 text-xs">
-        <p>&copy; 2025 BloodConnect. All rights reserved.</p>
+        <p>&copy; 2026 BloodConnect. All rights reserved.</p>
         <p class="mt-1 text-gray-600">Saving lives, one match at a time.</p>
     </footer>
 

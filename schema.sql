@@ -85,7 +85,7 @@ INSERT INTO users (full_name, email, password_hash, phone, role)
 VALUES (
     'System Admin',
     'admin@bloodconnect.com',
-    '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy',
+    '$2a$10$UE6oFLim8BTEoFqO/JW3VeTpt1hMd.lsFeqL2HtVUq2a9krwaRJIq',
     '9999999999',
     'ADMIN'
 );

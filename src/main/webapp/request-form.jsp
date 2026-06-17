@@ -157,7 +157,7 @@
 
         <!-- Footer -->
         <p class="text-center text-gray-600 text-xs mt-8">
-            &copy; 2025 BloodConnect. Saving lives, one match at a time.
+            &copy; 2026 BloodConnect. Saving lives, one match at a time.
         </p>
     </div>
 

@@ -81,6 +81,6 @@ CREATE INDEX idx_match_donor ON donor_matches(donor_id);
 -- This admin logs in through LoginServlet like every other user.
 -- ============================================================
 INSERT INTO users (full_name, email, password_hash, phone, role)
-SELECT 'System Admin', 'admin@bloodconnect.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', '9999999999', 'ADMIN'
+SELECT 'System Admin', 'admin@bloodconnect.com', '$2a$10$UE6oFLim8BTEoFqO/JW3VeTpt1hMd.lsFeqL2HtVUq2a9krwaRJIq', '9999999999', 'ADMIN'
 FROM dual
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'admin@bloodconnect.com');

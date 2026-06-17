@@ -65,7 +65,7 @@
         </div>
 
         <!-- Footer -->
-        <p class="text-gray-600 text-xs mt-12">&copy; 2025 BloodConnect. All rights reserved.</p>
+        <p class="text-gray-600 text-xs mt-12">&copy; 2026 BloodConnect. All rights reserved.</p>
     </div>
 
 </body>

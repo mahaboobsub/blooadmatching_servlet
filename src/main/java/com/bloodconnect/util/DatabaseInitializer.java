@@ -31,6 +31,20 @@ public class DatabaseInitializer implements ServletContextListener {
                      ResultSet rs = stmt.executeQuery("SELECT 1 FROM users LIMIT 1")) {
                     tablesExist = true;
                     System.out.println("DatabaseInitializer: 'users' table exists. Skipping initialization.");
+                    
+                    // Force insert admin if missing, and update password hash to the correct one if the table already exists
+                    try (Statement updateStmt = conn.createStatement()) {
+                        updateStmt.executeUpdate("INSERT INTO users (full_name, email, password_hash, phone, role) "
+                                               + "SELECT 'System Admin', 'admin@bloodconnect.com', '$2a$10$UE6oFLim8BTEoFqO/JW3VeTpt1hMd.lsFeqL2HtVUq2a9krwaRJIq', '9999999999', 'ADMIN' "
+                                               + "FROM dual "
+                                               + "WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'admin@bloodconnect.com')");
+                        
+                        updateStmt.executeUpdate("UPDATE users SET password_hash = '$2a$10$UE6oFLim8BTEoFqO/JW3VeTpt1hMd.lsFeqL2HtVUq2a9krwaRJIq' "
+                                               + "WHERE email = 'admin@bloodconnect.com'");
+                        System.out.println("DatabaseInitializer: Admin password hash verified & updated/inserted.");
+                    } catch (SQLException ex) {
+                        System.out.println("DatabaseInitializer Warning: Could not verify/update admin user: " + ex.getMessage());
+                    }
                 }
             } catch (SQLException e) {
                 // Table doesn't exist, need to run the schema script

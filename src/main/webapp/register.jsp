@@ -44,6 +44,16 @@
     </div>
 
     <div class="relative z-10 w-full max-w-lg px-6 py-10">
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="${pageContext.request.contextPath}/" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-xs font-medium transition-colors" id="back-home-btn">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
+
         <!-- Logo / Brand -->
         <div class="text-center mb-8">
             <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blood-500 to-blood-700 rounded-2xl shadow-lg shadow-blood-500/30 mb-3 animate-float">
@@ -198,7 +208,7 @@
 
         <!-- Footer -->
         <p class="text-center text-gray-600 text-xs mt-8">
-            &copy; 2025 BloodConnect. Saving lives, one match at a time.
+            &copy; 2026 BloodConnect. Saving lives, one match at a time.
         </p>
     </div>
 
