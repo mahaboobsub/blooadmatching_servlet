@@ -25,7 +25,7 @@ public class AuthFilter implements Filter {
 
     /** URLs that don't require authentication */
     private static final List<String> PUBLIC_URLS = Arrays.asList(
-        "/login", "/register", "/logout"
+        "/login", "/register", "/logout", "/", "/index.jsp"
     );
 
     /** Static asset prefixes that don't require authentication */
